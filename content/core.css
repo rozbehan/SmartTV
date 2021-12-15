@@ -1,0 +1,110 @@
+/*
+Company: Sixty AS
+Author: Mahdi rouzbahaneh
+2021/03/17
+*/
+
+@import "theme.css";
+
+.spin {
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    opacity: 0.6;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+}
+
+/* #region Option Bar */
+.option-bar {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap column;
+    width: 100%;
+    padding: 2px;
+    margin: 0;
+}
+
+.option-bar li {
+    background: var(--background-color);
+    color: var(--text-color);
+    border-style: solid;
+    border-color: var(--background-color);
+    border-width: 2px;
+    border-radius: var(--border-radius);
+    height: 3.2ch;
+    line-height: 3.2ch;
+    text-align: left;
+    vertical-align: middle;
+    padding: 0px 0px 0px 1ch;
+    margin: 0.3ch;
+    vertical-align: middle;
+    outline: none;
+}
+
+.option-bar li.selected,
+.option-bar li:active,
+.option-bar li:focus {
+    color: var(--highlight-text-color);
+}
+
+.option-bar li:active,
+.option-bar li:focus {
+    border-color: var(--highlight-color);
+}
+
+.option-bar input {
+    display: none;
+}
+
+.option-bar label {
+    line-height: normal;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow-wrap: normal;
+    user-select: 'none';
+}
+
+.right-arrow {
+    border: solid black;
+    border-width: 0 clamp(2px, 0.2vw, 4px) clamp(2px, 0.2vw, 4px) 0;
+    display: inline-block;
+    padding: clamp(3px, 0.3vw, 5px);
+    border-color: var(--highlight-color);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: clamp(2px, 0.3vw, 5px);
+    vertical-align: inherit;
+}
+/* #endregion Option Bar */
+
+/* #region imageGrid */
+.image-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 0px;
+    padding: 2px;
+}
+
+.image-grid input[type="image"] {
+    outline: 0;
+    border-style: solid;
+    border-color: var(--background-color);
+    border-width: 2px;
+    border-radius: var(--border-radius);
+    margin: 6px;
+    width: calc(100% - 12px);
+    height: auto;
+    z-index: 0;
+}
+
+.image-grid input[type="image"]:focus {
+    border-color: var(--highlight-color);
+    margin: -1px 0px -3px 0px;
+    padding: 2px;
+    width: calc(100% - 6px);
+    transform: translate(1px, -1px);
+    z-index: 1;
+}
+/* #endregion imageGrid */

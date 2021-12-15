@@ -1,0 +1,247 @@
+﻿/*
+Company: Sixty AS
+Author: Mahdi rouzbahaneh
+2021/03/17
+*/
+
+@import "theme.css";
+
+body {
+    box-sizing: content-box;
+    position: relative;
+    margin: 0px;
+    background: var(--background-color);
+    color: var(--color);
+    font-family: sans serif, Poppins;
+    font-size: clamp(14px, 1.5vw, 26px);
+    font-weight: 400;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.main {
+    left: 0px;
+    top: 0px;
+    padding: 4vw;
+    margin: 0;
+}
+
+/* #region movie */
+
+#movie-container {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    margin: 0px 0px 0px -0.6ch;
+    padding: 0px;
+    width: 92%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.slide {
+    left: -72vw !important;
+}
+
+.title {
+    padding-left: 1ch;
+    color: var(--highlight-text-color);
+    margin: 10px 10px 42px calc(1.3vw + 2px);
+    border-bottom: 2px solid var(--highlight-text-color);
+    width: fit-content;
+    padding: 0px;
+    font-weight: 500;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 19vw 1fr;
+    grid-gap: 5vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#movie-grid-container input,
+#movie-grid-container.selected input:focus {
+    filter: brightness(100%)
+}
+
+#movie-grid-container.selected input:not(:focus) {
+    filter: brightness(96%)
+}
+
+/* #endregion movie */
+
+/* #region detail */
+
+#movie-detail-container {
+    position: fixed;
+    background: inherit;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 75px;
+    left: 104vw;
+    width: 68vw;
+    height: calc(100vh - 100px);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    display: none;
+    outline: none;
+}
+
+#movie-detail-container::-webkit-scrollbar {
+    display: none;
+}
+
+#detail-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-detail {
+    left: 28vw !important;
+}
+
+#detail-title {
+    color: white;
+    font-size: 1.9vw;
+    font-weight: 400;
+    margin-bottom: 2.5vw;
+    width: 100%;
+    height: auto;
+    text-wrap: none;
+}
+
+.detail {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2.5vw;
+    height: auto;
+    overflow: hidden;
+}
+
+.detail-left {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(12px, 1.2vw, 22px);
+    font-weight: 400;
+    height: auto;
+    overflow: hidden;
+}
+
+.detail-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3vw;
+    row-gap: 0vw;
+    overflow: hidden;
+}
+
+.info-title {
+    color: var(--title-color);
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    padding: 1.5ch 0 0 0;
+    border-color: var(--title-color);
+}
+
+.info {
+    color: white;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#detail-image {
+    width: 100%;
+    height: auto;
+    margin: 3ch 0 4ch 0;
+}
+
+.actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2.5vw;
+    height: 6vw;
+    overflow: hidden;
+}
+
+button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    color: white;
+    align-self: center;
+    height: 100%;
+    align-self: center;
+    background: inherit;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-align: center;
+}
+
+button span {
+    flex: none;
+    text-align: left;
+    padding-left: 1vw;
+    vertical-align: middle;
+    line-height: 100%;
+    height: 6v;
+    align-self: center;
+    font-size: clamp(10px, 1vw, 16px);
+    font-weight: 400;
+}
+
+button img {
+    align-self: center;
+}
+
+button.play {
+    background: var(--highlight-color);
+}
+
+button.play img {
+    background: inherit;
+    width: 3.5ch;
+    height: 3.5ch;
+}
+
+button.trailer img {
+    width: 4.5ch;
+    height: 4.5ch;
+}
+
+button.add-list img {
+    width: 4.5ch;
+    height: 4.5ch;
+}
+
+#detail-overview {
+    color: var(--overview-color);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    button span {
+        display: none;
+    }
+}
+
+/* #endregion detail */

@@ -1,0 +1,61 @@
+﻿<!-- 
+Company: Sixty AS 
+Author: Mahdi rouzbahaneh 
+2021/03/17 
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js" 
+            integrity="sha512-HYiNpwSxYuji84SQbCU5m9kHEsRqwWypXgJMBtbRSumlx1iBB6QaxgEBZHSHEGM+fKyCX/3Kb5V5jeVXm0OglQ==" crossorigin="anonymous"></script>
+    <link href="content/theme.css" rel="stylesheet" />
+    <link href="content/test.css" rel="stylesheet" />
+    <link href="content/core.css" rel="stylesheet" />
+    <script src="content/core.js"></script>
+    <script src="content/test.js"></script>
+    <title>test-Sixty</title>
+    <style rel="preload">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="movie-container">
+            <label class="title"></label>
+            <div class="container">
+                <div id="genre-bar-container"></div>
+                <div id="movie-grid-container"></div>
+            </div>
+        </div>
+        <div id="movie-detail-container" tabindex="999">
+            <div id="detail-flex-container">
+                <label id="detail-title" data-model="title" data-type="text"></label>
+                <div class="detail">
+                    <div class="detail-left">
+                        <div class="detail-info">
+                            <label class="info-title">LENGTH</label>
+                            <label class="info-title">COUNTRY</label>
+                            <label class="info-title">LANGUAGE</label>
+                            <label id="length" class="info" data-model="time" data-type="text"></label>
+                            <label id="country" class="info" data-model="country" data-type="text"></label>
+                            <label id="language" class="info" data-model="language" data-type="text"></label>
+                        </div>
+                        <img id="detail-image" src="" data-model="image" data-type="src">
+                        <div class="actions">
+                            <button class="play"><img src="content/image/play.svg"><span>PLAY NOW</span></button>
+                            <button class="trailer"><img src="content/image/trailer.svg"><span>TRAILER</span></button>
+                            <button class="add-list"><img src="content/image/addlist.svg"><span>REMEMBER LIST</span></button>
+                        </div>
+                    </div>
+                    <div id="detail-overview" data-model="overview" data-type="text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="spin" src="content/image/spin.gif" style="display: none;" />
+</body>
+</html>

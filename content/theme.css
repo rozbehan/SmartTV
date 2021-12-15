@@ -1,0 +1,15 @@
+/*
+Company: Sixty AS
+Author: Mahdi rouzbahaneh
+2021/03/17
+*/
+
+:root {
+    --background-color: #1a1a1a;
+    --text-color: #979797;
+    --title-color: #494949;
+    --overview-color: #bdbdbd;
+    --highlight-color: #ff7900;
+    --highlight-text-color: #ffffff;
+    --border-radius: 5px;
+}
